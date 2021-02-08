@@ -1,10 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../../Visual Studio Code.app"
-		},
-		{
-			"path": ".."
-		}
-	]
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
