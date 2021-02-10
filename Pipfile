@@ -8,7 +8,6 @@ django = "==2.2.5"
 django-countries = "*"
 django-seed = "*"
 pillow = {path = "./Pillow-8.0.1-cp39-cp39-macosx_11_0_arm64.whl"}
-black = "*"
 
 [dev-packages]
 
