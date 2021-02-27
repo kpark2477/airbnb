@@ -129,3 +129,5 @@ dmypy.json
 
 # Media Fiels
 uploads
+
+node_modules/

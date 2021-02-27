@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django_countries.fields import CountryField
 from core import models as core_models
+from cal import Calendar
 
 # Create your models here.
 
@@ -112,3 +113,21 @@ class Room(core_models.TimeStampedModel):
             return round(avg, 2)
         else:
             return "No reviews"
+
+    def first_photo(self):
+        try:
+            photo, = self.photos.all()[:1]
+            return photo.file.url
+        except ValueError:
+            return None
+
+
+    def get_next_four_photos(self):
+        photos = self.photos.all()[1:5]
+        return photos
+
+
+    def get_calendars(self):
+        this_month = Calendar(2021, 2)
+        next_month = Calendar(2021, 3)
+        return False

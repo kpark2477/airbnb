@@ -133,6 +133,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # This tells Django to overide default user model with a customized one
 
@@ -152,3 +153,7 @@ EMAIL_PORT = "587"
 EMAIL_HOST_USER = os.environ.get("MAILGUN_USERNAME")
 EMAIL_HOST_PASSWORD = os.environ.get("MAILGUN_PASSWORD")
 EMAIL_FROM = "noreply@sandbox7437ee3348354252a662740f184b168f.mailgun.org"
+
+# Auth
+
+LOGIN_URL = "/users/login"
